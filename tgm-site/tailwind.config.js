@@ -8,10 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        emerald: "var(--emerald)",
       },
     },
   },
   plugins: [],
 };
+
+
+
+// custom tailwind can be added here
