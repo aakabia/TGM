@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  /* apply to the base layer which is typically targeting html and body tags */
 
-@media (prefers-color-scheme: dark) {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+  /* import Roboto from google fonts */
+
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --emerald: #028a0f;
+    --font-primary: "Roboto", "Times New Roman", sans-serif, Arial;
   }
-}
+  /* create a custom css variable color and font family primary at the root level in css */
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    font-family: var(--font-primary); /* Apply globally to the body */
   }
+
+  /* apply font family yo the body */
 }
