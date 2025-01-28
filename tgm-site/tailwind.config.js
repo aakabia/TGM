@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        emerald: "var(--emerald)",
+        emerald: "rgb(var(--emerald))",
+        emeraldOp:"rgba(2, 138, 15, 0.8)",
       },
     },
   },
