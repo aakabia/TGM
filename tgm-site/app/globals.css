@@ -9,7 +9,7 @@
   /* import Roboto from google fonts */
 
   :root {
-    --emerald: #028a0f;
+    --emerald: 2, 138, 15;
     --font-primary: "Roboto", "Times New Roman", sans-serif, Arial;
   }
   /* create a custom css variable color and font family primary at the root level in css */

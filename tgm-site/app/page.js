@@ -1,12 +1,105 @@
-
+"use client";
+import Image from "next/image";
+import bg from "../public/images/homeLawn.jpg";
+import servicePic from "../public/images/lawnCut.jpg";
+import { lawnBio } from "@/app/data";
 
 export default function Home() {
-  return (
-    <main className=" h-screen w-screen">
+  const handleClick = () => {
+    console.log("button clicked");
+  };
 
+  // button only console.logs currently
+
+  return (
+    <main className=" relative flex flex-col h-screen  w-screen">
+      <div className=" relative w-full h-[550px]">
+        <Image
+          src={bg}
+          alt="lawn care Image"
+          fill
+          objectFit="cover" // handy on making images seem closer
+          quality={100} // Optional: ensures high-quality rendering
+          style={{ filter: "brightness(100%)" }} // Darkens the image
+          className="-z-10 " // Places the image behind other content
+        />
+
+        <div className="flex flex-col justify-center items-center  bg-emeraldOp w-[50%] h-[550px] ">
+          <div>
+            <p className=" w-full text-white font-bold text-[30px]">
+              CONSIDER YOUR <br />
+              LAWN CARE,
+              <br /> CUTTING, MOWING,
+              <br /> AND LANDSCAPING
+              <br /> NEEDS SOLVED!
+            </p>
+          </div>
+
+          <div className="flex justify-start w-[37%] my-2">
+            <button
+              onClick={handleClick}
+              className="bg-emeraldOp text-white px-4 py-3 font-thin text-sm rounded border  border-white hover:text-emerald hover:bg-white"
+            >
+              GET QUOTE
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Above is the end of our top background image */}
+
+      <div className="w-full h-auto py-20 flex justify-between p-36 ">
+        <div className="relative flex w-[300px] h-[600px] overflow-hidden">
+          <Image
+            src={servicePic}
+            alt="man cutting grass"
+            fill // parent container must have relative absolute or fixed position
+            objectFit="cover" // handy on making images seem closer
+            quality={100} // Optional: ensures high-quality rendering
+            style={{ filter: "brightness(100%)" }} // Darkens the image
+            className="-z-10" // Places the image behind other content
+          />
+        </div>
+        {/* ABove is the side image on left */}
+
+        <div className="relative flex flex-col justify-between w-[600px] h-[550px] overflow-hidden">
+          <div className="flex flex-col overflow-hidden w-full">
+            <h2 className="font-bold text-xl ">
+              Cutting-Edge <span className="text-emerald">Expertise</span> &
+              Customer <span className="text-emerald">Satisfaction</span>
+            </h2>
+            <br />
+            <p className="font-thin">{lawnBio.serviceStatment}</p>
+            <br />
+            <p className="font-thin">{lawnBio.experienceStatment}</p>
+            {/* Above is where I use the imported react fragments */}
+          </div>
+          <div className="w-full flex flex-row justify-between items-center">
+            <h3 className="flex flex-col items-center justify-end">
+              <span className="text-4xl">
+                15<span className="text-[20px] px-2 font-bold">+</span>
+              </span>{" "}
+              <br /> <span className="text-lg">years of experience</span>
+            </h3>
+            {/* can possibly make a component for these h3 becuase they all use the same styles and elements. */}
+            <h3 className="flex flex-col items-center justify-end">
+              <span className="text-4xl">
+                500<span className="text-[20px] px-2 font-bold">+</span>
+              </span>{" "}
+              <br /> <span className="text-lg">satisfied customers</span>
+            </h3>
+            <h3 className="flex flex-col items-center justify-end">
+              <span className="text-4xl">
+                100<span className="text-[20px] px-2 font-bold">%</span>
+              </span>{" "}
+              <br /> <span className="text-lg">satisfaction guaranteed</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+      {/* Above is the end of our side (left) image and company statement */}
     </main>
   );
 }
 
-
-// home page hs nothing yet 
+// home page hs nothing yet
