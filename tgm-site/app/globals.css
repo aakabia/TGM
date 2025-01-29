@@ -20,3 +20,41 @@
 
   /* apply font family yo the body */
 }
+
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+  /* above is custom css to pause animation*/
+
+  .fadeout-horizontal {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(var(--emerald), 1) 5rem,
+      rgba(var(--emerald), 1) calc(100% - 5rem),
+      /* Use rgba for color and opacity */ transparent
+    );
+    /* mask image allows us to control how much of a element we see and they take a linear gradient.*/
+
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(var(--emerald), 1) 5rem,
+      rgba(var(--emerald), 1) calc(100% - 5rem),
+      transparent
+    );
+
+    /* -webkit-mask-image ensures compatibility with WebKit-based browsers (e.g., Safari). */
+  }
+
+  /* fadeout-horizontal used in our marquee component*/
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Above helps tranistion a element at different positions.*/

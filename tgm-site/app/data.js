@@ -4,7 +4,6 @@ export const BtnList = [
   { label: "CAREERS", link: "/careers", icon: "careers", newTab: false },
   { label: "PORTAL", link: "/portal", icon: "portal", newTab: true },
   { label: "BLOG", link: "/awareness", icon: "blog", newTab: false },
-  
 ];
 
 // Above is data for our links
@@ -30,10 +29,31 @@ export const lawnBio = {
 
   experienceStatment: (
     <>
-    With over 15 years of expertise in lawn care and property maintenance, 
-    our experience has taught us the importance of crafting tailored strategies that provide property owners with lasting results. 
-    We take pride in our commitment to excellence, ensuring every lawn reflects the care and precision we bring to our work. 
-    Let us transform your outdoor space & request a <a className="underline text-emerald hover:text-black" href="/">quote</a> today!</>),
+      With over 15 years of expertise in lawn care and property maintenance, our
+      experience has taught us the importance of crafting tailored strategies
+      that provide property owners with lasting results. We take pride in our
+      commitment to excellence, ensuring every lawn reflects the care and
+      precision we bring to our work. Let us transform your outdoor space &
+      request a{" "}
+      <a className="underline text-emerald hover:text-black" href="/">
+        quote
+      </a>{" "}
+      today!
+    </>
+  ),
 };
 
 // Above are exported react fragments that contain hard coded data that we will display on our home page.
+
+export const serviceAreas =
+  {
+    areas: [
+      "-Dacula","-Lawrenceville","-Snellville","-Suwanee","-Lilburn","-Grayson","-Norcross","-Winder","-Bethlehem","-Auburn",
+    ],
+    areaStatment: `TGM proudly serves the Gwinnett County area, providing top-quality lawn care and property maintenance services. If you're unsure whether we service your specific location, feel free to reach out, and we'll be happy to assist you!`,
+};
+
+
+export const marqueeWords = { top:["Mowing", "Edging", "Trimming", "Aeration"],
+    bottom:["Fertilization", "Turf Dye","Leaf Clean Up"]
+}
