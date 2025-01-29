@@ -11,6 +11,15 @@ module.exports = {
         emerald: "rgb(var(--emerald))",
         emeraldOp:"rgba(2, 138, 15, 0.8)",
       },
+      animation: {
+        marquee: 'marquee 30s linear infinite', // Use the animation defined in your global CSS
+        reverseMarquee: "marquee 30s linear infinite reverse", // reverse version 
+      },
+      keyframes: { // define how element changes at different points 
+        marquee: {
+          '0%': { transform: 'translateX(-50%)' }, // move element left 50% its own width 
+        },
+      },
     },
   },
   plugins: [],
