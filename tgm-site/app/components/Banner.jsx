@@ -2,13 +2,13 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className=" w-full h-auto bg-emerald  ">
-      <div className=" flex flex-row justify-center  p-2 text-white font-bold">
-        <h3 className="mx-5 text-black">
+    <div className=" w-full h-auto bg-emerald">
+      <div className="flex flex-col sm:flex-row items-center justify-center p-2 text-white font-bold">
+        <h3 className=" text-sm sm:text-md   mx-5 text-white">
           Please support our mission towards Suicide Awareness!
         </h3>
         <h3>
-          <a className="underline hover:text-black" href="">
+          <a className="underline text-yellow-300 hover:text-white" href="">
             Learn More
           </a>
         </h3>

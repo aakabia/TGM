@@ -2,8 +2,9 @@ export const BtnList = [
   { label: "ABOUT", link: "/about", icon: "about", newTab: false },
   { label: "SERVICES", link: "/services", icon: "service", newTab: false },
   { label: "CAREERS", link: "/careers", icon: "careers", newTab: false },
+  { label: "GALLERY", link: "/gallery", icon: "gallery", newTab: false },
   { label: "PORTAL", link: "/portal", icon: "portal", newTab: true },
-  { label: "BLOG", link: "/awareness", icon: "blog", newTab: false },
+  { label: "BLOG", link: "/blog", icon: "blog", newTab: false },
 ];
 
 // Above is data for our links
