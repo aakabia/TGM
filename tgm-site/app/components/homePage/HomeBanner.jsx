@@ -24,7 +24,7 @@ const HomeBanner = () => {
 
       <div className="flex flex-col justify-center items-center  bg-emeraldOp w-[50%] h-[550px] ">
         <div>
-          <p className=" w-full text-white font-bold text-[30px]">
+          <p className=" w-full text-white font-bold md:text-[30px]">
             CONSIDER YOUR <br />
             LAWN CARE,
             <br /> CUTTING, MOWING,
@@ -33,10 +33,10 @@ const HomeBanner = () => {
           </p>
         </div>
 
-        <div className="flex justify-start w-[37%] my-2">
+        <div className="flex justify-start w-[50%] my-2 md:w-[37%] ">
           <button
             onClick={handleClick}
-            className="bg-emeraldOp text-white px-4 py-3 font-thin text-sm rounded border  border-white hover:text-emerald hover:bg-white"
+            className="bg-emeraldOp text-white rounded border  border-white hover:text-emerald hover:bg-white p-1 my-4  text-[15px]  md:px-4  md:text-sm "
           >
             GET QUOTE
           </button>

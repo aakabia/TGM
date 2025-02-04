@@ -10,15 +10,15 @@ const ServiceArea = () => {
   };
 
   return (
-    <div className=" py-20 w-full h-auto flex justify-between ">
-      <div className="w-[50%] p-20 overflow-hidden ">
-        <h3 className="text-4xl">
-          <span className="text-emerald">Serving</span> Gwinnett <br /> County &
+    <div className=" py-20 w-full h-auto flex justify-between  md:p-5 lg:p-20 ">
+      <div className="  w-[800px]  p-5 overflow-hidden  ">
+        <h2 className=" font-bold  md:text-4xl">
+          <span className="text-emerald">Servicing</span> Gwinnett <br /> County &
           More
-        </h3>
-        <p className="p-5 font-thin">{serviceAreas.areaStatment}</p>
-        <h3 className="p-5 font-thin text-2xl">Areas We Proudly Serve:</h3>
-        <ul className="p-5 font-thin text-xl overflow-hidden">
+        </h2>
+        <p className=" p-3 md:p-5 text-sm md:text-base font-thin">{serviceAreas.areaStatment}</p>
+        <h3 className="py-3 md:p-5  font-thin text-lg md:text-2xl">Areas We <span className="text-emerald">Proudly </span>Service:</h3>
+        <ul className="p-1 md:p-5 font-bold text-[15px]  md:text-xl overflow-hidden">
           {serviceAreas.areas.map((area, index) => {
             return (
               <li className="p-1" key={index}>
@@ -28,7 +28,7 @@ const ServiceArea = () => {
           })}
         </ul>
       </div>
-      <div className="w-[40%] p-10 mx-14 relative flex flex-col justify-center items-center  bg-emeraldOp overflow-hidden">
+      <div className="w-[300px] p-4 md:p-10 mx-14 relative flex flex-col justify-center items-center  bg-emeraldOp overflow-hidden">
         <Image
           src={grassPic}
           alt="grass Image"
@@ -38,11 +38,11 @@ const ServiceArea = () => {
           style={{ filter: "brightness(100%)" }} // Darkens the image
           className=" -z-10 " // Places the image behind other content
         />
-        <h2 className="p-20 font-thin text-4xl text-white">Areas We Serve</h2>
+        <h2 className="p-20 font-thin text-2xl md:text-4xl text-white text-center ">Areas We Service</h2>
         <div>
           <button
             onClick={handleClick}
-            className="bg-emeraldOp text-white px-4 py-3 font-thin text-sm rounded border  border-white hover:text-emerald hover:bg-white"
+            className="bg-emeraldOp text-white px-3 md:px-4 py-3 font-thin text-sm rounded border  border-white hover:text-emerald hover:bg-white"
           >
             GET QUOTE
           </button>

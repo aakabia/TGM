@@ -10,6 +10,7 @@
 
   :root {
     --emerald: 2, 138, 15;
+    --offScreenDark: 34, 37, 49;
     --font-primary: "Roboto", "Times New Roman", sans-serif, Arial;
   }
   /* create a custom css variable color and font family primary at the root level in css */
@@ -49,6 +50,60 @@
   }
 
   /* fadeout-horizontal used in our marquee component*/
+}
+
+@layer components {
+  .ham-menu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .ham-menu.show {
+    transform: translateX(0); /* Slide in */
+    opacity: 1; /* Fade in */
+  }
+
+  /* Above is css to help hide then show our ham-menu */
+  /* the .show property is added or removed from the component with every toggle*/
+
+  .ham-menu-span {
+    position: absolute;
+    height: 5px;
+    width: 75%;
+    background-color: green;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ham-menu-span:first-child {
+    top: 25%;
+  }
+  .ham-menu-span:last-child {
+    top: 75%;
+  }
+
+  /* creates three burgers stacked on each other */
+
+  .ham-menu-span.active:first-child {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .ham-menu-span.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham-menu-span.active:last-child {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  /* creates our X when the menu is active*/
+
+  /* Above helps postion our span tags within our ham menu container*/
 }
 
 @keyframes marquee {

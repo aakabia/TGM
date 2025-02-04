@@ -5,8 +5,8 @@ import {lawnBio} from "@/app/data";
 
 const CompanyIntro = () => {
   return (
-    <div className="w-full h-auto py-20 flex justify-between p-36 ">
-      <div className="relative flex w-[300px] h-[600px] overflow-hidden">
+    <div className="w-full h-auto py-20 flex justify-between p-5 lg:p-36 ">
+      <div className="relative flex w-[300px]  overflow-hidden p-5">
         <Image
           src={servicePic}
           alt="man cutting grass"
@@ -19,37 +19,37 @@ const CompanyIntro = () => {
       </div>
       {/* Above is the side image on left */}
 
-      <div className="relative flex flex-col justify-between w-[600px] h-[550px] overflow-hidden">
+      <div className="relative flex flex-col justify-between w-[600px] overflow-hidden p-5  ">
         <div className="flex flex-col overflow-hidden w-full">
-          <h2 className="font-bold text-xl ">
+          <h2 className="font-bold md:text-xl ">
             Cutting-Edge <span className="text-emerald">Expertise</span> &
             Customer <span className="text-emerald">Satisfaction</span>
           </h2>
           <br />
-          <p className="font-thin">{lawnBio.serviceStatment}</p>
+          <p className=" text-sm font-thin md:text-base">{lawnBio.serviceStatment}</p>
           <br />
-          <p className="font-thin">{lawnBio.experienceStatment}</p>
+          <p className=" text-sm font-thin md:text-base">{lawnBio.experienceStatment}</p>
           {/* Above is where I use the imported react fragments */}
         </div>
-        <div className="w-full flex flex-row justify-between items-center">
+        <div className="w-full flex flex-row justify-between items-center mx-3 my-7 md:mx-3 ">
           <h3 className="flex flex-col items-center justify-end">
-            <span className="text-4xl">
-              15<span className="text-[20px] px-2 font-bold">+</span>
+            <span className=" text-[20px] md:text-4xl">
+              15<span className=" text-[15px]  px-2 font-bold">+</span>
             </span>{" "}
-            <br /> <span className="text-lg">years of experience</span>
+            <br /> <span className=" text-xs  md:text-sm lg:text-lg ">years of experience</span>
           </h3>
           {/* can possibly make a component for these h3 becuase they all use the same styles and elements. */}
           <h3 className="flex flex-col items-center justify-end">
-            <span className="text-4xl">
-              500<span className="text-[20px] px-2 font-bold">+</span>
+            <span className= "text-[20px] md:text-4xl">
+              500<span className=" text-[15px]   px-2 font-bold">+</span>
             </span>{" "}
-            <br /> <span className="text-lg">satisfied customers</span>
+            <br /> <span className=" text-xs  md:text-sm lg:text-lg ">satisfied customers</span>
           </h3>
           <h3 className="flex flex-col items-center justify-end">
-            <span className="text-4xl">
-              100<span className="text-[20px] px-2 font-bold">%</span>
+            <span className=" text-[20px] md:text-4xl">
+              100<span className="  text-[15px]   px-2 font-bold">%</span>
             </span>{" "}
-            <br /> <span className="text-lg">satisfaction guaranteed</span>
+            <br /> <span className=" text-xs md:text-sm lg:text-lg ">satisfaction guaranteed</span>
           </h3>
         </div>
       </div>
