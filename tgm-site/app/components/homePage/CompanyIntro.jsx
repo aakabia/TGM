@@ -6,7 +6,7 @@ import {lawnBio} from "@/app/data";
 const CompanyIntro = () => {
   return (
     <div className="w-full h-auto py-20 flex justify-between p-5 lg:p-36 ">
-      <div className="relative flex w-[300px]  overflow-hidden p-5">
+      <div className="relative flex w-[300px]  overflow-hidden p-5 shadow-glass-sm">
         <Image
           src={servicePic}
           alt="man cutting grass"
@@ -26,9 +26,9 @@ const CompanyIntro = () => {
             Customer <span className="text-emerald">Satisfaction</span>
           </h2>
           <br />
-          <p className=" text-sm font-thin md:text-base">{lawnBio.serviceStatment}</p>
+          <p className=" indent-2 text-sm font-thin md:text-base">{lawnBio.serviceStatment}</p>
           <br />
-          <p className=" text-sm font-thin md:text-base">{lawnBio.experienceStatment}</p>
+          <p className=" indent-2  text-sm font-thin md:text-base">{lawnBio.experienceStatment}</p>
           {/* Above is where I use the imported react fragments */}
         </div>
         <div className="w-full flex flex-row justify-between items-center mx-3 my-7 md:mx-3 ">

@@ -21,6 +21,11 @@ module.exports = {
           '0%': { transform: 'translateX(-50%)' }, // move element left 50% its own width 
         },
       },
+
+      boxShadow: {
+        "glass-inset": "inset 0 17px 5px -9px rgba(var(--emerald), 0.8)", // Emerald color with 80% opacity
+        "glass-sm": "5px 5px 30px 0px rgba(var(--emerald), 0.8)", // Emerald color with 80% opacity
+      },
     },
   },
   plugins: [],

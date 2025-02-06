@@ -16,7 +16,7 @@ const ServiceArea = () => {
           <span className="text-emerald">Servicing</span> Gwinnett <br /> County &
           More
         </h2>
-        <p className=" p-3 md:p-5 text-sm md:text-base font-thin">{serviceAreas.areaStatment}</p>
+        <p className=" indent-2 p-3 md:p-5 text-sm md:text-base font-thin">{serviceAreas.areaStatment}</p>
         <h3 className="py-3 md:p-5  font-thin text-lg md:text-2xl">Areas We <span className="text-emerald">Proudly </span>Service:</h3>
         <ul className="p-1 md:p-5 font-bold text-[15px]  md:text-xl overflow-hidden">
           {serviceAreas.areas.map((area, index) => {
@@ -28,7 +28,7 @@ const ServiceArea = () => {
           })}
         </ul>
       </div>
-      <div className="w-[300px] p-4 md:p-10 mx-14 relative flex flex-col justify-center items-center  bg-emeraldOp overflow-hidden">
+      <div className="w-[300px] p-4 md:p-10 mx-14 relative flex flex-col justify-center items-center  bg-emeraldOp overflow-hidden shadow-glass-sm">
         <Image
           src={grassPic}
           alt="grass Image"
