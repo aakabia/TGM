@@ -1,3 +1,13 @@
+import LawnManageService from "../public/images/lawnManage.jpg";
+import propertyCareService from "../public/images/propertyCare.jpg";
+import fertilizerCareService from "../public/images/fertilizer.jpg";
+import pressureWashingService from "../public/images/pressureWashing.jpg";
+import leafCleanUPService from "../public/images/leafCleanUp.jpg";
+import aerationService from "../public/images/aeration.jpg";
+import mulchService from "../public/images/mulch.jpg";
+import flowerService from "../public/images/flowers.jpg";
+import trashService from "../public/images/lawnTrash.jpg";
+
 export const BtnList = [
   { label: "ABOUT", link: "/about", icon: "about", newTab: false },
   { label: "SERVICES", link: "/services", icon: "service", newTab: false },
@@ -81,6 +91,21 @@ export const lawnBio = {
       vision while pursuing his own passions.
     </>
   ),
+
+  serviceBio: (
+    <>
+      At Two Guys & A Mower, we offer a wide range of services, including{" "}
+      <span className="text-emerald font-bold">lawn care</span>,{" "}
+      <span className="text-emerald font-bold">gutter cleaning</span>,{" "}
+      <span className="text-emerald font-bold">pressure washing</span>,{" "}
+      <span className="text-emerald font-bold">aeration</span>,{" "}
+      <span className="text-emerald font-bold">and more</span>. We specialize in
+      weekly and bi-weekly landscape management for both residential and
+      commercial properties, providing year-round property care for residents of
+      Gwinnett County and the surrounding areas. TGM is dedicated to helping our
+      clients achieve their landscaping goals with precision and reliability.
+    </>
+  ),
 };
 
 // Above are exported react fragments that contain hard coded data that we will display on our home and about page.
@@ -105,3 +130,144 @@ export const marqueeWords = {
   top: ["Mowing", "Edging", "Trimming", "Aeration"],
   bottom: ["Fertilization", "Turf Dye", "Leaf Clean Up"],
 };
+
+export const serviceDiscriptions = [
+  {
+    pic: LawnManageService,
+    title: "Lawn Management",
+    serviceBio:
+      "Our lawn management service includes mowing, edging along driveways, walkways, and bed areas, as well as clearing debris from concrete surfaces to keep your property looking pristine.",
+    plansDiscription:
+      "We offer flexible service plans designed to maintain a healthy, well-groomed lawn throughout the season. Choose a schedule that works best for you and enjoy a consistently maintained outdoor space with ease.",
+    plans: [
+      `15-week lawn maintenance contract (bi-weekly from April to October).`,
+      `30-week lawn maintenance contract (weekly from April to October).`,
+    ],
+  },
+  {
+    pic: propertyCareService,
+    title: "Property Management",
+    serviceBio:
+      "Our weekly property maintenance includes expert shrub and hedge pruning, professional lawn fertilization, and core plug aeration for a healthier, greener lawn.",
+    plansDiscription:
+      "Choose from our 30, 40, or 50-week landscape management programs. Our dedicated team ensures precise lawn cutting, crisp perimeters, and a consistently clean property. Sit back, relax, and enjoy your outdoor space with the confidence that your landscape is in expert hands.",
+    plans: [
+      `30-Week Landscape Management Contract: (March–October)`,
+      `40-Week Landscape Management Contract: (April–December, includes leaf clean-up)`,
+      `50-Week Landscape Management Contract: (March–February, includes leaf clean-up and 1 seasonal flower installation)`,
+      `50-Week Commercial Landscaping Contract: (March–February, includes leaf clean-up, 1 mulch or pine straw application, and 2 seasonal flower installations) – Recommended for HOA’s.`,
+    ],
+  },
+  {
+    pic: fertilizerCareService,
+    title: "Tree Pruning & Fertilizer",
+    serviceBio:
+      " Enhance your weekly lawn care service by adding our expert shrub pruning for a bundled savings. Our lawn fertilization service is the perfect way to boost your yard’s curb appeal, promote healthier grass growth, and increase resistance to pests, all while ensuring a vibrant and lush lawn throughout the growing season.",
+    plansDiscription:
+      "Our crepe myrtle and small tree pruning services are available during the winter months, from December to March, ensuring your trees stay healthy and beautifully shaped throughout the year.",
+    plans: [
+      `Bermuda Lawns: March to November`,
+      `Zoysia Lawns: March to November`,
+      `Fescue Lawns: September to June`,
+    ],
+  },
+  {
+    pic: pressureWashingService,
+    title: "Pressure Washing",
+    serviceBio:
+      "Enhance the beauty of your property by adding our professional pressure washing service to any of our landscape management packages. It’s the perfect way to remove dirt, grime, and stains, leaving your outdoor spaces looking fresh and well-maintained.",
+    plansDiscription:
+      "Our pressure washing service is available from March through November, ensuring your property stays spotless and inviting throughout the year.",
+    plans: [
+      `-House Washing`,
+      `-Roof Washing`,
+      `-Roof Washing`,
+      `-Concrete Cleaning`,
+    ],
+  },
+  {
+    pic: leafCleanUPService,
+    title: "Leaf & Gutters",
+    serviceBio:
+      "Our gutter cleaning service involves removing leaves by either blowing them off the roof or hand-cleaning them while on a ladder. Additionally, our mulching leaf clean-up service includes blowing out bed areas and mulching the leaves throughout your yard to keep it looking neat and tidy.",
+    plansDiscription:
+      "Mulching and leaf clean-up service are available from October through February and November through January.",
+    plans: [
+      `Gutter cleaning service is available from October through February`,
+      `Leaf clean-up and mulching from November through January`,
+      `New to Fall 2025: Our "Blow and Go" drive-by leaf clean-up service allows customers to blow their leaves to the edge of the curb. We will then come by to collect and dispose of them, offering a convenient and efficient solution from November through January.`,
+      
+    ],
+  },
+  {
+    pic: aerationService,
+    title: "Aeration & Topdressing",
+    serviceBio:
+      "Our aeration service is tailored to your lawn type, while our topdressing service provides a natural solution to maintain healthy turf throughout the growing season and helps retain moisture during drought conditions.",
+    plansDiscription:
+      "Our topdressing material is a custom blend of compost, topsoil, and sand, making it an excellent choice for leveling lawns and promoting the successful establishment of new sod on compacted surfaces.",
+    plans: [
+      `Our aeration service depends on lawn type:`,
+      `-Bermuda Lawns: April-June, September-October`,
+      `-Zoysia Lawns:  April-July `,
+      `-Fescue Lawns: August-November`,
+      `Topdressing service is recommended for all lawn types from March to September.`,
+    ],
+  },
+  {
+    pic: mulchService,
+    title: "Sod & Mulch Installation",
+    serviceBio:
+      "Our sod installation service delivers an instant, lush lawn, perfect for filling in bare spots or replacing damaged grass. We prepare the soil, lay the sod, and use proper watering techniques to ensure a vibrant, healthy lawn. Additionally, our mulch installation service enhances the beauty of your landscape by retaining moisture, preventing weeds, and adding a polished look. With premium mulch options and expert application, we give your garden the care and attention it deserves.",
+    plansDiscription:
+      "We offer sod installation services from March to November, providing a quick solution for a lush, healthy lawn. Our mulch delivery and installation service is available from February to November, helping enhance your landscape while retaining moisture and preventing weeds.",
+    plans: [
+      `Sod:`,
+      `-Bermuda sod`,
+      `-Zoysia sod `,
+      `-Tall fescue sod`,
+      `Mulch:`,
+      `-Natural Mulch (non-dyed)`,
+      `-Red Mulch `,
+      `-Brown Mulch (Top Seller)  `,
+      `-Black Mulch `,
+      `Our mulch delivery and laying service is available from February to November.`,
+    ],
+  },
+  {
+    pic: flowerService,
+    title: "Flowers & Rock Installation",
+    serviceBio:
+      "We offer seasonal flower arrangements tailored to your property's sunlight needs, along with long needle pine straw delivery and spreading from February to November. Our selection of decorative rocks, gravel, and boulders can add a unique touch to your landscape. Additionally, our eco-friendly, pet-safe lawn dye keeps your lawn green year-round, lasting up to 6 weeks, and reducing the need for chemicals.",
+    plansDiscription:
+      "We install seasonal flowers with organic fertilizer to provide optimal nutrients from the spring to fall. Our rock delivery and laying service is available from February to November, while our eco-friendly lawn dye and long needle pine straw are available year-round to keep your landscape looking vibrant and healthy.",
+    plans: [
+      `Flower Install:`,
+      `Spring and Fall seasonal flowers`,
+      `Rock Install:`,
+      `February-November`,
+      
+      
+      
+    ],
+  },
+  {
+    pic: trashService,
+    title: "Property Clean-Up",
+    serviceBio:
+      "Property clean-ups are a one-time service, not recurring, and include mowing, trimming, edging, pruning shrubs/bushes, and a general clean-up of clippings to leave your landscape looking neat and tidy. This service is perfect for seasonal transitions or special events.",
+    plansDiscription:
+      "Our property clean-up service is available year-round, ensuring your outdoor space remains tidy and well-maintained in every season.",
+    plans: [
+      `Property clean-ups can also include hauling away various items such as:`,
+      `Metals: tin, copper, iron, etc.`,
+      `Organic Matter: tree limbs, leaves, clippings, etc.`,
+      `Junk: hot tubs, lawn mowers, swing sets, outdoor furniture, and more.`,
+      
+      
+      
+    ],
+  },
+];
+
+// Above is the array of listed services 

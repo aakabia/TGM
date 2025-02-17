@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         emerald: "rgb(var(--emerald))",
+        darkGreen:"rgb(var(--darkGreen))",
         emeraldOp:"rgba(2, 138, 15, 0.8)",
         offScreenDark:"rgb(34,37,49)", // color for hamburger menu bg
       },

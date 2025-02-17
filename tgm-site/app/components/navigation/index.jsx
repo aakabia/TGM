@@ -28,16 +28,14 @@ const Navigation = () => {
 
   return (
     <div className="relative flex flex-row justify-between items-center p-5">
-      <div>
+      <div className= 'w-[25%] md:w-[15%] '>
         <a href="/">
         <Image
           src={bg}
           alt="Background Logo Image"
-          width={150} // Width of the image
-          height={100} // Height of the image
           quality={100} // Optional: ensures high-quality rendering
           style={{ filter: "brightness(100%)" }} // Darkens the image
-          className=" w-[90px]  -z-10 " // Places the image behind other content
+          className=" w-[100px]  -z-10 " // Places the image behind other content
         />
         </a>
       </div>
@@ -50,7 +48,7 @@ const Navigation = () => {
 
 
       
-      <div className="hidden md:flex flex-row justify-between h-auto  w-[60%] ">
+      <div className="hidden md:flex flex-row justify-between h-auto  w-[70%] ">
         
 
         {BtnList.map((btn, index) => {
