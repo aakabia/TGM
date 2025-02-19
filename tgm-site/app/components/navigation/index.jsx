@@ -1,4 +1,5 @@
 "use client"; // to handle on client side
+import { useRouter } from 'next/navigation'; 
 import React, { useState } from 'react';
 import Image from "next/image";
 import bg from "../../../public/images/TGMLogo.jpg";
@@ -10,8 +11,9 @@ import HamburgerIcon from "./hamburgerMenu/HamburgerIcon";
 
 const Navigation = () => {
 
-  const handleClick = () => {
-    console.log("button clicked");
+    const router = useRouter();
+    const handleClick = () => {
+    router.push(`/quote`);
   };
 
   // Above does nothing yet 
@@ -77,4 +79,4 @@ const Navigation = () => {
 
 export default Navigation;
 
-// button only console logs currently
+

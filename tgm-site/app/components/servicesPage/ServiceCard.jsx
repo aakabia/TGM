@@ -1,10 +1,25 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import "boxicons/css/boxicons.min.css";
 import Image from "next/image";
 
-const ServiceCard = ({ pic, title, serviceBio, plansDiscription, plans }) => {
+const ServiceCard = ({
+  pic,
+  alt,
+  title,
+  serviceBio,
+  plansDiscription,
+  plans,
+}) => {
   const [showFirstElement, setShowFirstElement] = useState(false);
+  const router = useRouter();
+  // Above calls the next router
+
+  const handleClick = () => {
+    router.push(`/quote?service=${encodeURIComponent(title)}`);
+  };
+   // Our handle click push the router to our quote page with params in the url
 
   return (
     <div
@@ -15,7 +30,7 @@ const ServiceCard = ({ pic, title, serviceBio, plansDiscription, plans }) => {
         <div className="w-full h-[150px] relative">
           <Image
             src={pic}
-            alt="man cutting grass"
+            alt={alt}
             fill
             objectFit="cover"
             quality={100}
@@ -58,7 +73,10 @@ const ServiceCard = ({ pic, title, serviceBio, plansDiscription, plans }) => {
 
         <div className=" p-2 relative w-full h-auto">
           <div className="flex justify-start w-[50%]">
-            <button className="bg-emeraldOp text-white rounded border  border-white hover:text-emerald hover:bg-white p-1 text-[15px] md:text-sm ">
+            <button
+              onClick={handleClick}
+              className="bg-emeraldOp text-white rounded border  border-white hover:text-emerald hover:bg-white p-1 text-[15px] md:text-sm "
+            >
               GET QUOTE
             </button>
           </div>
@@ -90,3 +108,5 @@ export default ServiceCard;
   The card is clickable and expands when selected. 
   This functionality is achieved through conditional rendering of a div based on the value of showFirstElement.
  */
+
+  // useRouter helps us navigate and pass params to other pages.

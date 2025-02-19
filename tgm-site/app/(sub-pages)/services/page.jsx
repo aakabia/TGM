@@ -29,6 +29,7 @@ const Services = () => {
                 <ServiceCard
                   key={index}
                   pic={service.pic}
+                  alt={service.alt}
                   title={service.title}
                   serviceBio={service.serviceBio}
                   plansDiscription={service.plansDiscription}
