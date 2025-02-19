@@ -1,11 +1,14 @@
 "uae client";
+import { useRouter } from 'next/navigation'; 
 import React from "react";
 import Image from "next/image";
 import bg from "../../../public/images/homeLawn.jpg";
 
 const HomeBanner = () => {
+  const router = useRouter();
+
   const handleClick = () => {
-    console.log("button clicked");
+    router.push(`/quote`);
   };
   
   // button only console.logs currently

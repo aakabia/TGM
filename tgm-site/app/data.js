@@ -106,6 +106,23 @@ export const lawnBio = {
       clients achieve their landscaping goals with precision and reliability.
     </>
   ),
+
+  quoteBio: (
+    <>
+      At TGM, we are dedicated to{" "}
+      <span className="text-emerald font-bold">
+        providing exceptional lawn care services{" "}
+      </span>
+      tailored to meet your unique needs. Whether you’re
+      looking for routine maintenance, landscaping design, or specialized
+      treatments, our team of experienced professionals is here to help you
+      achieve the lush, vibrant lawn of your dreams. We pride ourselves on our
+      commitment to quality, customer satisfaction, and environmentally friendly
+      practices. If you have any questions, concerns, or would like to schedule
+      a consultation, please don’t hesitate to reach out to us. We look forward
+      to helping you enhance the beauty of your outdoor space!
+    </>
+  ),
 };
 
 // Above are exported react fragments that contain hard coded data that we will display on our home and about page.
@@ -134,9 +151,10 @@ export const marqueeWords = {
 export const serviceDiscriptions = [
   {
     pic: LawnManageService,
+    alt: "Nice lawn on a yard",
     title: "Lawn Management",
     serviceBio:
-      "Our lawn management service includes mowing, edging along driveways, walkways, and bed areas, as well as clearing debris from concrete surfaces to keep your property looking pristine.",
+      "Our lawn management service includes mowing, edging along driveways, walkways, and bed areas, as well as clearing debris from concrete surfaces to keep your property looking pristine. Enjoy a beautifully maintained lawn that enhances your home’s curb appeal effortlessly!",
     plansDiscription:
       "We offer flexible service plans designed to maintain a healthy, well-groomed lawn throughout the season. Choose a schedule that works best for you and enjoy a consistently maintained outdoor space with ease.",
     plans: [
@@ -146,9 +164,10 @@ export const serviceDiscriptions = [
   },
   {
     pic: propertyCareService,
+    alt: "Worker taking care of the property",
     title: "Property Management",
     serviceBio:
-      "Our weekly property maintenance includes expert shrub and hedge pruning, professional lawn fertilization, and core plug aeration for a healthier, greener lawn.",
+      "Our weekly property maintenance includes expert shrub and hedge pruning, professional lawn fertilization, and core plug aeration for a healthier, greener lawn. Let us handle the details so you can enjoy a lush, vibrant landscape year-round!",
     plansDiscription:
       "Choose from our 30, 40, or 50-week landscape management programs. Our dedicated team ensures precise lawn cutting, crisp perimeters, and a consistently clean property. Sit back, relax, and enjoy your outdoor space with the confidence that your landscape is in expert hands.",
     plans: [
@@ -160,6 +179,7 @@ export const serviceDiscriptions = [
   },
   {
     pic: fertilizerCareService,
+    alt: "Fertilizer in workers hand",
     title: "Tree Pruning & Fertilizer",
     serviceBio:
       " Enhance your weekly lawn care service by adding our expert shrub pruning for a bundled savings. Our lawn fertilization service is the perfect way to boost your yard’s curb appeal, promote healthier grass growth, and increase resistance to pests, all while ensuring a vibrant and lush lawn throughout the growing season.",
@@ -173,6 +193,7 @@ export const serviceDiscriptions = [
   },
   {
     pic: pressureWashingService,
+    alt: "Worker pressure washing walk way",
     title: "Pressure Washing",
     serviceBio:
       "Enhance the beauty of your property by adding our professional pressure washing service to any of our landscape management packages. It’s the perfect way to remove dirt, grime, and stains, leaving your outdoor spaces looking fresh and well-maintained.",
@@ -187,6 +208,7 @@ export const serviceDiscriptions = [
   },
   {
     pic: leafCleanUPService,
+    alt: "Worker blowing leafs",
     title: "Leaf & Gutters",
     serviceBio:
       "Our gutter cleaning service involves removing leaves by either blowing them off the roof or hand-cleaning them while on a ladder. Additionally, our mulching leaf clean-up service includes blowing out bed areas and mulching the leaves throughout your yard to keep it looking neat and tidy.",
@@ -196,11 +218,11 @@ export const serviceDiscriptions = [
       `Gutter cleaning service is available from October through February`,
       `Leaf clean-up and mulching from November through January`,
       `New to Fall 2025: Our "Blow and Go" drive-by leaf clean-up service allows customers to blow their leaves to the edge of the curb. We will then come by to collect and dispose of them, offering a convenient and efficient solution from November through January.`,
-      
     ],
   },
   {
     pic: aerationService,
+    alt: "Picture of nice grass",
     title: "Aeration & Topdressing",
     serviceBio:
       "Our aeration service is tailored to your lawn type, while our topdressing service provides a natural solution to maintain healthy turf throughout the growing season and helps retain moisture during drought conditions.",
@@ -216,6 +238,7 @@ export const serviceDiscriptions = [
   },
   {
     pic: mulchService,
+    alt: "Laying sod on a yard",
     title: "Sod & Mulch Installation",
     serviceBio:
       "Our sod installation service delivers an instant, lush lawn, perfect for filling in bare spots or replacing damaged grass. We prepare the soil, lay the sod, and use proper watering techniques to ensure a vibrant, healthy lawn. Additionally, our mulch installation service enhances the beauty of your landscape by retaining moisture, preventing weeds, and adding a polished look. With premium mulch options and expert application, we give your garden the care and attention it deserves.",
@@ -236,6 +259,7 @@ export const serviceDiscriptions = [
   },
   {
     pic: flowerService,
+    alt: "A garden with rocks and flowers",
     title: "Flowers & Rock Installation",
     serviceBio:
       "We offer seasonal flower arrangements tailored to your property's sunlight needs, along with long needle pine straw delivery and spreading from February to November. Our selection of decorative rocks, gravel, and boulders can add a unique touch to your landscape. Additionally, our eco-friendly, pet-safe lawn dye keeps your lawn green year-round, lasting up to 6 weeks, and reducing the need for chemicals.",
@@ -246,13 +270,11 @@ export const serviceDiscriptions = [
       `Spring and Fall seasonal flowers`,
       `Rock Install:`,
       `February-November`,
-      
-      
-      
     ],
   },
   {
     pic: trashService,
+    alt: "Recycle bin with trash in it",
     title: "Property Clean-Up",
     serviceBio:
       "Property clean-ups are a one-time service, not recurring, and include mowing, trimming, edging, pruning shrubs/bushes, and a general clean-up of clippings to leave your landscape looking neat and tidy. This service is perfect for seasonal transitions or special events.",
@@ -263,11 +285,8 @@ export const serviceDiscriptions = [
       `Metals: tin, copper, iron, etc.`,
       `Organic Matter: tree limbs, leaves, clippings, etc.`,
       `Junk: hot tubs, lawn mowers, swing sets, outdoor furniture, and more.`,
-      
-      
-      
     ],
   },
 ];
 
-// Above is the array of listed services 
+// Above is the array of listed services

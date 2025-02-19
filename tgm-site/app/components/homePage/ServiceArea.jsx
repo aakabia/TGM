@@ -1,12 +1,14 @@
 "use client";
+import { useRouter } from 'next/navigation';
 import React from "react";
 import Image from "next/image";
 import { serviceAreas } from "@/app/data";
 import grassPic from "../../../public/images/grass.jpg";
 
 const ServiceArea = () => {
+  const router = useRouter();
   const handleClick = () => {
-    console.log("button clicked");
+    router.push(`/quote`);
   };
 
   return (
