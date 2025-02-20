@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* import Roboto from google fonts */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,13 +7,10 @@
 @layer base {
   /* apply to the base layer which is typically targeting html and body tags */
 
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-  /* import Roboto from google fonts */
-
   :root {
     --emerald: 2, 138, 15;
     --offScreenDark: 34, 37, 49;
-    --darkGreen: 34, 65, 34; 
+    --darkGreen: 34, 65, 34;
     --font-primary: "Roboto", "Times New Roman", sans-serif, Arial;
   }
   /* create a custom css variable color and font family primary at the root level in css */
@@ -51,9 +50,6 @@
   }
 
   /* fadeout-horizontal used in our marquee component*/
-
-
-  
 }
 
 @layer components {
