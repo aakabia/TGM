@@ -113,14 +113,36 @@ export const lawnBio = {
       <span className="text-emerald font-bold">
         providing exceptional lawn care services{" "}
       </span>
-      tailored to meet your unique needs. Whether you’re
-      looking for routine maintenance, landscaping design, or specialized
-      treatments, our team of experienced professionals is here to help you
-      achieve the lush, vibrant lawn of your dreams. We pride ourselves on our
-      commitment to quality, customer satisfaction, and environmentally friendly
-      practices. If you have any questions, concerns, or would like to schedule
-      a consultation, please don’t hesitate to reach out to us. We look forward
-      to helping you enhance the beauty of your outdoor space!
+      tailored to meet your unique needs. Whether you’re looking for routine
+      maintenance, landscaping design, or specialized treatments, our team of
+      experienced professionals is here to help you achieve the lush, vibrant
+      lawn of your dreams. We pride ourselves on our commitment to quality,
+      customer satisfaction, and environmentally friendly practices. If you have
+      any questions, concerns, or would like to schedule a consultation, please
+      don’t hesitate to reach out to us. We look forward to helping you enhance
+      the beauty of your outdoor space!
+    </>
+  ),
+
+  careerBio: (
+    <>
+      Welcome to Two Guys and a Mower's Career Services page! We are passionate
+      about providing top-notch lawn care and landscaping services to our
+      community, and we're always on the lookout for dedicated individuals to
+      join our team. At Two Guys and a Mower, we believe that our{" "}
+      <span className="text-emerald font-bold">
+        employees are our greatest asset
+      </span>
+      , and we strive to create a{" "}
+      <span className="text-emerald font-bold"> supportive</span> and{" "}
+      <span className="text-emerald font-bold">inclusive </span> work
+      environment where everyone can{" "}
+      <span className="text-emerald font-bold">thrive</span>. Whether you're an
+      experienced professional or just starting out, we offer opportunities for
+      growth, training, and development in a dynamic and fun atmosphere. If
+      you're ready to take your career to the next level and be part of a team
+      that values <span className="text-emerald font-bold">teamwork</span>,
+      please fill out the form below if interested!
     </>
   ),
 };

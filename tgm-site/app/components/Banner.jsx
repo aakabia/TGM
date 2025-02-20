@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className=" w-full h-auto bg-emerald">
       <div className="flex flex-col sm:flex-row items-center justify-center p-2 text-white font-bold">
-        <h3 className=" text-sm sm:text-md   mx-5 text-white">
+        <h3 className=" text-[13px] sm:text-md   mx-5 text-white">
           Please support our mission towards Suicide Awareness!
         </h3>
         <h3>

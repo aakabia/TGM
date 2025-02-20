@@ -1,37 +1,44 @@
 "use client";
-import React from "react";
-import { useForm } from "react-hook-form";
+import React, { forwardRef } from "react";
+import { useForm, Controller } from "react-hook-form";
 import { useSearchParams } from "next/navigation";
 import { Toaster, toast } from "sonner";
 import { sendEmail } from "../../../helpers/helpers.js";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 export default function QuoteForm() {
   const searchParams = useSearchParams();
   const service = searchParams.get("service");
+
   //console.log("service:", service);
 
   const {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors },
   } = useForm();
-
-  
 
   const onSubmit = (data) => {
     const templetParams = {
       to_name: "Bryan Macko",
       from_name: data.name,
       reply_to: data.email,
+      service: data.service,
       message: data.message,
-      phone: data["phone #"],
+      phone: data.phone,
     };
 
     sendEmail(templetParams, toast, reset);
   };
 
   //console.log(errors);   <--uncomment to see errors from form
+
+  const CustomInput = forwardRef((props, ref) => (
+    <input {...props} ref={ref} className="focus:outline-none " />
+  ));
 
   return (
     <>
@@ -60,6 +67,8 @@ export default function QuoteForm() {
           </span>
         )}
 
+        {/* name input above */}
+
         <input
           className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1"
           type="email"
@@ -72,25 +81,49 @@ export default function QuoteForm() {
           </span>
         )}
 
-        <input
-          className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1"
-          type="tel"
-          placeholder="phone #"
-          {...register("phone #", {
-            required: "* A Phone number is required!",
+        {/* email input above */}
+
+        <Controller
+          name="phone"
+          control={control}
+          defaultValue=""
+          rules={{
+            required: "* A phone number is required!",
             validate: {
-              isValidPhone: (value) =>
-                /^\d{10}$/.test(value) ||
-                "* Phone number must be 10 digits with no special chars!", // Adjust regex as needed
+              isValidPhone: (value) => {
+                let cleanedValue = value.replace(/\D/g, ""); // Remove non-digit characters
+
+                if (cleanedValue.startsWith("1")) {
+                  cleanedValue = cleanedValue.slice(1);
+                }
+                console.log("Validating phone number:", cleanedValue);
+                if (cleanedValue.length !== 10) {
+                  return "* United States number with exactly 10 digits!";
+                }
+                return true; // If valid, return true
+              },
             },
-          })}
+          }}
+          render={({ field: { onChange, value }, fieldState: { error } }) => (
+            <div className=" w-full text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1">
+              <PhoneInput
+                placeholder="Enter phone number"
+                value={value}
+                onChange={onChange}
+                defaultCountry="US"
+                inputComponent={CustomInput}
+              />
+            </div>
+          )}
         />
 
-        {errors["phone #"] && (
+        {errors.phone && (
           <span className="inline-block self-start font-bold text-sm">
-            {errors["phone #"].message}
+            {errors.phone.message}
           </span>
         )}
+
+        {/* Phone input above */}
 
         <select
           className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50 border-[5px] border-solid border-emeraldOp rounded-lg p-1 text-black"
@@ -123,6 +156,8 @@ export default function QuoteForm() {
           </span>
         )}
 
+        {/* select input above */}
+
         <textarea
           placeholder="message"
           className="w-full h-[150px] focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1 "
@@ -145,6 +180,8 @@ export default function QuoteForm() {
           </span>
         )}
 
+        {/* text area input above */}
+
         <input
           className="px-10 py-4 shadow-lg bg-emerald text-white border-accent/30 border-emeraldOp rounded-lg border-solid hover:shadow-glass-sm  focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize"
           type="submit"
@@ -157,3 +194,8 @@ export default function QuoteForm() {
 // Above is a form component built from the react hook form website and styled by me.
 // The form uses the register function for the inputs and conditional rending for the errors.
 // useSearchParams helps us get our params passed in our route
+// Controller is used to manage control input like (input or textarea)
+// Inside the render prop, you destructure the onChange, onBlur, and value functions to bind the input component to the form state.
+// A Phone Input is a specialized input component designed to accept phone numbers. It often includes features like formatting, validation, and country selection.
+// The CustomInput component allows you to define styles and behaviors in one place. (used this because phone input was not acceptinfg dirext styles due to not supporting UseClass or className directly)
+// ForwardRef is a function in React that allows you to pass a ref (reference) from a parent component to a child component.
