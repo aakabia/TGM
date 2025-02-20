@@ -16,7 +16,8 @@ const ServiceCard = ({
   const router = useRouter();
   // Above calls the next router
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.stopPropagation();
     router.push(`/quote?service=${encodeURIComponent(title)}`);
   };
    // Our handle click push the router to our quote page with params in the url
