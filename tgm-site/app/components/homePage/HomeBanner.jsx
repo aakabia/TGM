@@ -22,11 +22,12 @@ const HomeBanner = () => {
         quality={100} // Optional: ensures high-quality rendering
         style={{ filter: "brightness(100%)", objectFit: "cover"}} // Darkens the image and and covers div
         className="-z-10 " // Places the image behind other content
+        priority
       />
 
       <div className="flex flex-col justify-center items-center  bg-emeraldOp w-[50%] h-[550px] ">
         <div>
-          <p className=" w-full text-white font-bold md:text-[30px]">
+          <p className=" w-full text-white font-bold sm:text-[30px]">
             CONSIDER YOUR <br />
             LAWN CARE,
             <br /> CUTTING, MOWING,
