@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import collagePicOne from "../../../public/images/collageOne.jpg";
 import collagePicTwo from "../../../public/images/collageTwo.jpeg";
 import collagePicThree from "../../../public/images/collageThree.jpg";

@@ -9,6 +9,7 @@ const CollageComponent = ({pic, alt, className}) => {
         src={pic}
         alt={alt}
         fill 
+        sizes="(max-width: 768px) 160px, (max-width: 1024px) 200px, 250px"
         quality={100} 
         style={{
           filter: "brightness(100%)",
