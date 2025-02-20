@@ -32,9 +32,12 @@ const ServiceCard = ({
             src={pic}
             alt={alt}
             fill
-            objectFit="cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 250px"
             quality={100}
-            style={{ filter: "brightness(100%)" }}
+            style={{
+              filter: "brightness(100%)",
+              objectFit: "cover",
+            }} 
             className="rounded-lg"
           />
         </div>

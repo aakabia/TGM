@@ -11,9 +11,9 @@ const CompanyIntro = () => {
           src={servicePic}
           alt="man cutting grass"
           fill // parent container must have relative absolute or fixed position
-          objectFit="cover" // handy on making images seem closer
+          sizes="300px"
           quality={100} // Optional: ensures high-quality rendering
-          style={{ filter: "brightness(100%)" }} // Darkens the image
+          style={{ filter: "brightness(100%)", objectFit: "cover"}} // Darkens the image and and covers div
           className="-z-10" // Places the image behind other content
         />
       </div>

@@ -15,6 +15,7 @@ const PictureBio = ({ pic, bio, name }) => {
           alt="Photo of Brandon"
           fill // parent container must have relative absolute or fixed position
           quality={100} // Optional: ensures high-quality rendering
+          sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 500px"
           style={{
             filter: "brightness(100%)",
             objectFit: name === "Brandon" ? "cover" : "",
