@@ -3,7 +3,7 @@ import emailJs from "@emailjs/browser";
 
 
 
-export const sendEmail = (params, toast,reset ) => {
+export const sendEmail = (params, toast,reset,templetID ) => {
     
  
 
@@ -14,7 +14,7 @@ export const sendEmail = (params, toast,reset ) => {
     emailJs
       .send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLET_ID,
+        templetID,
         params,
         {
           publicKey: process.env.NEXT_PUBLIC_API_KEY,

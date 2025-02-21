@@ -7,6 +7,7 @@ import aerationService from "../public/images/aeration.jpg";
 import mulchService from "../public/images/mulch.jpg";
 import flowerService from "../public/images/flowers.jpg";
 import trashService from "../public/images/lawnTrash.jpg";
+import { Option } from "lucide-react";
 
 export const BtnList = [
   { label: "ABOUT", link: "/about", icon: "about", newTab: false },
@@ -312,3 +313,82 @@ export const serviceDiscriptions = [
 ];
 
 // Above is the array of listed services
+
+export const careerQuestions = [
+  {
+    question: "Are you atleast 16 years of age?",
+    id1: "consentYes",
+    id2: "consentNo",
+    option1: "Yes",
+    option2: "No",
+    registerName: "consent",
+    errorMessage: "Please pick Yes or No!",
+  },
+  {
+    question: "How many years of landscaping experience?",
+    id1: "0-2",
+    id2: "3+",
+    option1: "0-2 years",
+    option2: "3+ years",
+    registerName: "experience",
+    errorMessage: "Please pick years of experience!",
+  },
+  {
+    question: "Do you have a valid driver's license?",
+    id1: "licenseYes",
+    id2: "licenseNo",
+    option1: "Yes",
+    option2: "No",
+    registerName: "license",
+    errorMessage: "Please pick Yes or No!",
+  },
+  {
+    question:
+      "Do you have reliable transportation to commute to and from work?",
+    id1: "transportationYes",
+    id2: "transportationNo",
+    option1: "Yes",
+    option2: "No",
+    registerName: "transportation",
+    errorMessage: "Please pick Yes or No!",
+  },
+  {
+    question:
+      "Are you interested in a full-time position (32+ hours per week) or a part-time position?",
+    id1: "hours32+",
+    id2: "hoursPartTime",
+    option1: "Full-Time",
+    option2: "Part-Time",
+    registerName: "hours",
+    errorMessage: "Please pick Full-Time or Part-Time!",
+  },
+  {
+    question: "Are you seeking a seasonal position or a year-round role?",
+    id1: "yearRound",
+    id2: "seasonal",
+    option1: "Year-Round",
+    option2: "Seasonal",
+    registerName: "workLength",
+    errorMessage: "Please pick year-round or seasonal!",
+  },
+  {
+    question: "Available to Work Weekends?",
+    id1: "weekendsYes",
+    id2: "weekendsNo",
+    option1: "Yes",
+    option2: "No",
+    registerName: "weekends",
+    errorMessage: "Please yes or No!",
+  },
+  {
+    question: "Can you Lift 140lbs or more?",
+    id1: "liftYes",
+    id2: "liftNo",
+    option1: "Yes",
+    option2: "No",
+    registerName: "lift",
+    errorMessage: "Please yes or No!",
+  },
+];
+
+// Above is a list for career questions to be displayed don the page.

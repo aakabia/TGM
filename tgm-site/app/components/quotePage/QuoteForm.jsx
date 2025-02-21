@@ -22,6 +22,7 @@ export default function QuoteForm() {
   } = useForm();
 
   const onSubmit = (data) => {
+    const templetId = process.env.NEXT_PUBLIC_TEMPLET_ID
     const templetParams = {
       to_name: "Bryan Macko",
       from_name: data.name,
@@ -33,11 +34,11 @@ export default function QuoteForm() {
       advertise: data.advertise,
     };
 
-    sendEmail(templetParams, toast, reset);
+    sendEmail(templetParams, toast, reset,templetId);
   };
 
-  console.log(errors);
-  // <--uncomment to see errors from form
+  //console.log(errors);<--uncomment to see errors from form
+  
 
   const CustomInput = forwardRef((props, ref) => (
     <input {...props} ref={ref} className="focus:outline-none " />
@@ -65,7 +66,7 @@ export default function QuoteForm() {
         />
 
         {errors.name && (
-          <span className="inline-block self-start font-bold text-sm">
+          <span className="inline-block self-start font-bold text-sm text-red-500">
             {errors.name.message}
           </span>
         )}
@@ -79,7 +80,7 @@ export default function QuoteForm() {
           {...register("email", { required: "* A valid email is required!" })}
         />
         {errors.email && (
-          <span className="inline-block self-start font-bold text-sm">
+          <span className="inline-block self-start font-bold text-sm text-red-500">
             {errors.email.message}
           </span>
         )}
@@ -99,7 +100,7 @@ export default function QuoteForm() {
                 if (cleanedValue.startsWith("1")) {
                   cleanedValue = cleanedValue.slice(1);
                 }
-                console.log("Validating phone number:", cleanedValue);
+                //console.log("Validating phone number:", cleanedValue);
                 if (cleanedValue.length !== 10) {
                   return "* United States number with exactly 10 digits!";
                 }
@@ -121,7 +122,7 @@ export default function QuoteForm() {
         />
 
         {errors.phone && (
-          <span className="inline-block self-start font-bold text-sm">
+          <span className="inline-block self-start font-bold text-sm text-red-500">
             {errors.phone.message}
           </span>
         )}
@@ -155,7 +156,7 @@ export default function QuoteForm() {
         </select>
 
         {errors.service && (
-          <span className="inline-block self-start font-bold text-sm">
+          <span className="inline-block self-start font-bold text-sm text-red-500">
             {errors.service.message}
           </span>
         )}
@@ -172,7 +173,7 @@ export default function QuoteForm() {
         />
 
         {errors.date && (
-          <span className="inline-block self-start font-bold text-sm">
+          <span className="inline-block self-start font-bold text-sm text-red-500">
             {errors.date.message}
           </span>
         )}
@@ -201,10 +202,12 @@ export default function QuoteForm() {
         />
 
         {errors.advertise && (
-          <span className="inline-block self-start font-bold text-sm">
+          <span className="inline-block self-start font-bold text-sm text-red-500">
             {errors.advertise.message}
           </span>
         )}
+
+        {/*advertise select above */}
 
         <textarea
           placeholder="message"
@@ -223,7 +226,7 @@ export default function QuoteForm() {
         />
 
         {errors.message && (
-          <span className="inline-block self-start font-bold text-sm">
+          <span className="inline-block self-start font-bold text-sm text-red-500">
             {errors.message.message}
           </span>
         )}
