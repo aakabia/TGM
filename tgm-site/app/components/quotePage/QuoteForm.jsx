@@ -29,12 +29,15 @@ export default function QuoteForm() {
       service: data.service,
       message: data.message,
       phone: data.phone,
+      date: data.date,
+      advertise: data.advertise,
     };
 
     sendEmail(templetParams, toast, reset);
   };
 
-  //console.log(errors);   <--uncomment to see errors from form
+  console.log(errors);
+  // <--uncomment to see errors from form
 
   const CustomInput = forwardRef((props, ref) => (
     <input {...props} ref={ref} className="focus:outline-none " />
@@ -126,9 +129,10 @@ export default function QuoteForm() {
         {/* Phone input above */}
 
         <select
+          id="service"
           className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50 border-[5px] border-solid border-emeraldOp rounded-lg p-1 text-black"
           defaultValue={service || ""}
-          {...register("service", { required: "* A Service is required!" })}
+          {...register("service", { required: "* Please choose a service!" })}
         >
           <option value="" disabled>
             Choose a service
@@ -156,13 +160,57 @@ export default function QuoteForm() {
           </span>
         )}
 
-        {/* select input above */}
+        {/* service input above */}
+
+        <input
+          type="date"
+          className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1 "
+          placeholder="date"
+          {...register("date", {
+            required: "* Please choose a date for the service!",
+          })}
+        />
+
+        {errors.date && (
+          <span className="inline-block self-start font-bold text-sm">
+            {errors.date.message}
+          </span>
+        )}
+        {/* date area input above */}
+
+        <Controller
+          name="advertise"
+          control={control}
+          defaultValue={""}
+          rules={{ required: "* Please share how you found us!" }}
+          render={({ field }) => (
+            <select {...field}  className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50 border-[5px] border-solid border-emeraldOp rounded-lg p-1 text-black">
+              <option value="" disabled>
+                Share how you found us
+              </option>
+              <option value="Friend">Friend</option>
+              <option value="Door Hanger">Door Hanger</option>
+              <option value="PostCard">PostCard</option>
+              <option value="Truck and Trailer">Truck and Trailer</option>
+              <option value="Yard Sign">Yard Sign</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram:Gooogle">Instagram:Gooogle</option>
+              <option value="other">other</option>
+            </select>
+          )}
+        />
+
+        {errors.advertise && (
+          <span className="inline-block self-start font-bold text-sm">
+            {errors.advertise.message}
+          </span>
+        )}
 
         <textarea
           placeholder="message"
           className="w-full h-[150px] focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1 "
           {...register("message", {
-            required: "* A massage is required!",
+            required: "* Please describe the service!",
             maxLength: {
               value: 500,
               message: "Message should be less than 500 characters!",
@@ -195,6 +243,7 @@ export default function QuoteForm() {
 // The form uses the register function for the inputs and conditional rending for the errors.
 // useSearchParams helps us get our params passed in our route
 // Controller is used to manage control input like (input or textarea)
+// you can either destructure the field object or spread it to your select or input
 // Inside the render prop, you destructure the onChange, onBlur, and value functions to bind the input component to the form state.
 // A Phone Input is a specialized input component designed to accept phone numbers. It often includes features like formatting, validation, and country selection.
 // The CustomInput component allows you to define styles and behaviors in one place. (used this because phone input was not acceptinfg dirext styles due to not supporting UseClass or className directly)
