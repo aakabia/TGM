@@ -195,7 +195,8 @@ export default function QuoteForm() {
               <option value="Truck and Trailer">Truck and Trailer</option>
               <option value="Yard Sign">Yard Sign</option>
               <option value="Facebook">Facebook</option>
-              <option value="Instagram:Gooogle">Instagram:Gooogle</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Google">Google</option>
               <option value="other">other</option>
             </select>
           )}
