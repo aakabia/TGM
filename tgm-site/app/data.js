@@ -14,7 +14,7 @@ export const BtnList = [
   { label: "SERVICES", link: "/services", icon: "service", newTab: false },
   { label: "CAREERS", link: "/careers", icon: "careers", newTab: false },
   { label: "GALLERY", link: "/gallery", icon: "gallery", newTab: false },
-  { label: "PORTAL", link: "/portal", icon: "portal", newTab: true },
+  { label: "PORTAL", link: "/portal", icon: "portal", newTab: false },
   { label: "BLOG", link: "/blog", icon: "blog", newTab: false },
 ];
 
@@ -392,3 +392,21 @@ export const careerQuestions = [
 ];
 
 // Above is a list for career questions to be displayed don the page.
+
+export const FaqQuestions = [
+  {
+    question: "What is the Client Portal?",
+    paragraph:
+      "The Client Portal is your all-in-one hub for managing your services. Active customers can schedule additional services, track upcoming appointments, make payments, and access exclusive promotional discounts—all in one convenient place.",
+  },
+  {
+    question: "Why did we choose a Client Portal?",
+    paragraph:
+      "We chose the client portal to enhance communication as a growing small business. It provides a streamlined way to connect with our customers, allowing for faster and clearer interactions between clients and our office.",
+  },
+  {
+    question: "How to use the Client Portal?",
+    paragraph:
+      "Active clients can log in to the Client Portal using their email and password. Once inside, clients can easily request estimates, add work orders, track recurring services, and process credit card payments, all in one convenient location. We encourage all active clients to use the portal as their primary means of communication with us. This will help reduce the strain on our phone system, allowing us to better serve all our active clients and ensure that our phone lines are available for new customers.",
+  },
+];
