@@ -85,10 +85,10 @@ export const lawnBio = {
       up to lead TGM in order to keep his late brother Brandon’s dream alive,
       ensuring his legacy continues with dedication and passion. Alongside
       running the business, Bryan is also a passionate BBQ chef and the owner of
-      Big MAC’s BBQ, a well-loved local spot in Gwinnett. His love for cooking
+      Big Macko’s BBQ, a well-loved local spot in Gwinnett. His love for cooking
       extends beyond his restaurant, as he actively competes in local BBQ
       competitions, bringing his signature flavors to the community. Through
-      both TGM and Big MAC’s BBQ, Bryan continues to build on his brother’s
+      both TGM and Big Macko’s BBQ, Bryan continues to build on his brother’s
       vision while pursuing his own passions.
     </>
   ),

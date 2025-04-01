@@ -1,5 +1,4 @@
 "use client"; // to handle on client side
-import { useRouter } from 'next/navigation'; 
 import React, { useState } from 'react';
 import Image from "next/image";
 import bg from "../../../public/images/TGMLogo.jpg";
@@ -11,11 +10,16 @@ import HamburgerIcon from "./hamburgerMenu/HamburgerIcon";
 
 const Navigation = () => {
 
-    const router = useRouter();
-    const handleClick = () => {
-    router.push(`/quote`);
-  };
-
+    
+  
+    const handleClick = (event) => {
+      // Use window.location.href to navigate
+      event.stopPropagation();
+      window.location.href = "/quote";
+      
+     
+      
+    };
   // Above does nothing yet 
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

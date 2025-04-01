@@ -1,5 +1,5 @@
 import React from "react";
-import brandoPic from "../../../public/images/BrandoPhoto.jpg";
+import brandoPic from "../../../public/images/brandoNewPic.jpg";
 import bryanPic from "../../../public/images/BryanPhoto.jpg";
 import { lawnBio } from "@/app/data";
 import PictureBio from "@/app/components/aboutPage/PictureBio";
