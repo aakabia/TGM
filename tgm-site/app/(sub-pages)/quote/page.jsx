@@ -1,9 +1,9 @@
-
-import QuoteForm from "@/app/components/quotePage/QuoteForm";
 import React from "react";
 import { lawnBio } from "@/app/data";
 
 const Quote = () => {
+  const FormID = process.env.NEXT_PUBLIC_FORM_ID;
+
   return (
     <div className="w-full h-screen flex flex-col justify-center mt-16 ">
       <div className=" w-full h-screen flex flex-col items-center justify-between space-y-5 ">
@@ -15,13 +15,21 @@ const Quote = () => {
             {lawnBio.quoteBio}
           </p>
         </div>
-        
-        <h2 className="font-bold text-lg text-emerald capitalize">Contact</h2>
-        <h3 className="font-bold text-lg  capitalize">Phone: (770)-856-3450 </h3>
-        <h3 className="font-bold text-lg  capitalize">Or</h3>
-        
 
-        <QuoteForm />
+        <h2 className="font-bold text-lg text-emerald capitalize">Contact</h2>
+        <h3 className="font-bold text-lg  capitalize">
+          Phone: (770)-856-3450{" "}
+        </h3>
+        <h3 className="font-bold text-lg  capitalize">Or</h3>
+
+        <div className="w-full h-screen">
+          <div
+            id={FormID}
+            className="copilot-request-container copilot-preview-loader"
+          ></div>
+
+          {/* The dive above with id={FormID} is boiler code from copilotcrm.com to import our form. */}
+        </div>
       </div>
     </div>
   );

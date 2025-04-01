@@ -1,5 +1,4 @@
 "use client";
-import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import "boxicons/css/boxicons.min.css";
 import Image from "next/image";
@@ -13,14 +12,13 @@ const ServiceCard = ({
   plans,
 }) => {
   const [showFirstElement, setShowFirstElement] = useState(false);
-  const router = useRouter();
-  // Above calls the next router
+
 
   const handleClick = (event) => {
     event.stopPropagation();
-    router.push(`/quote?service=${encodeURIComponent(title)}`);
+    window.location.href = '/quote';
   };
-   // Our handle click push the router to our quote page with params in the url
+   // Our handle click uses window.location.href to navigate to the quote page
 
   return (
     <div

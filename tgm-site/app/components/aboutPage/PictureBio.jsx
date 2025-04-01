@@ -18,8 +18,7 @@ const PictureBio = ({ pic, bio, name }) => {
           sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 500px"
           style={{
             filter: "brightness(100%)",
-            objectFit: name === "Brandon" ? "cover" : "",
-          }} // Darkens the image and conditionally sets object.fit
+          }}
           className="-z-10" // Places the image behind other content
         />
       </div>

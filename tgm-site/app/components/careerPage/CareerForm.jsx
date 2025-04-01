@@ -42,7 +42,7 @@ export default function QuoteForm() {
   //console.log(errors);<--uncomment to see errors from form
 
   const CustomInput = forwardRef((props, ref) => (
-    <input {...props} ref={ref} className="focus:outline-none " />
+    <input {...props} ref={ref} className="focus:outline-none " id="phoneCustomInput" />
   ));
 
   //ForwardRef is a function in React that allows you to pass a ref (reference) from a parent component to a child component.
@@ -55,10 +55,13 @@ export default function QuoteForm() {
         <form
           onSubmit={handleSubmit(onSubmit)}
           className=" max-w-md w-full h-auto flex flex-col items-center justify-center space-y-3 p-5 "
+          
         >
           <input
             className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1 "
             type="text"
+            autoComplete="on"
+            name="name"
             placeholder="name"
             {...register("name", {
               required: "* A name is required!",
@@ -78,7 +81,9 @@ export default function QuoteForm() {
 
           <input
             className="w-full focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1"
+            autoComplete="on"
             type="email"
+            name="email"
             placeholder="email "
             {...register("email", { required: "* A valid email is required!" })}
           />
@@ -92,6 +97,7 @@ export default function QuoteForm() {
           <Controller
             name="phone"
             control={control}
+            
             defaultValue=""
             rules={{
               required: "* A phone number is required!",
@@ -139,6 +145,7 @@ export default function QuoteForm() {
 
           <textarea
             placeholder="message"
+            name="message"
             className="w-full h-[150px] focus:outline-none focus:ring-2 focus:ring-accent/50  text-black border-[5px] border-solid border-emeraldOp rounded-lg p-1 "
             {...register("message", {
               maxLength: {
