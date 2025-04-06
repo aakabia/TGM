@@ -7,7 +7,23 @@ import aerationService from "../public/images/aeration.jpg";
 import mulchService from "../public/images/mulch.jpg";
 import flowerService from "../public/images/flowers.jpg";
 import trashService from "../public/images/lawnTrash.jpg";
-import { Option } from "lucide-react";
+
+
+
+import galleryImage1 from "../public/images/gallery/galleryPhoto1.jpg"
+import galleryImage2 from "../public/images/gallery/galleryPhoto2.jpg"
+import galleryImage3 from "../public/images/gallery/galleryPhoto3.jpg"
+import galleryImage4 from "../public/images/gallery/galleryPhoto4.jpg"
+import galleryImage5 from "../public/images/gallery/galleryPhoto5.jpg"
+import galleryImage6 from "../public/images/gallery/galleryPhoto6.jpg"
+import galleryImage7 from "../public/images/gallery/galleryPhoto7.jpeg"
+import galleryImage8 from "../public/images/gallery/galleryPhoto8.jpeg"
+import galleryImage9 from "../public/images/gallery/galleryPhoto9.jpg"
+import galleryImage10 from "../public/images/gallery/galleryPhoto10.jpg"
+
+
+
+
 
 export const BtnList = [
   { label: "ABOUT", link: "/about", icon: "about", newTab: false },
@@ -146,9 +162,33 @@ export const lawnBio = {
       please fill out the form below if interested!
     </>
   ),
+
+  galleryBio: (
+    <>
+      Welcome to the <span className="text-emerald font-bold">TGM Gallery</span>{" "}
+      — the digital home of Two Guys and a Mower! This space showcases the{" "}
+      <span className="text-emerald font-bold">heart </span> and{" "}
+      <span className="text-emerald font-bold">hustle </span> behind our lawn
+      care journey. From fresh cuts and striped perfection to behind-the-scenes
+      moments, the TGM Library is where we share the work we’re proud of and the{" "}
+      <span className="text-emerald font-bold"> community </span>that supports
+      us. Dive in, explore our story through photos, and get a feel for what TGM
+      is all about. You can also check out more of our work by visiting us on{" "}
+      <span className="text-emerald font-bold">
+        <a
+          className="instagram"
+          target="_blank"
+          href="https://www.instagram.com/"
+        >
+          Instagram
+        </a>
+      </span>
+      !
+    </>
+  ),
 };
 
-// Above are exported react fragments that contain hard coded data that we will display on our home and about page.
+// Above are exported react fragments that contain hard coded data that we will display on our all our pages.
 
 export const serviceAreas = {
   areas: [
@@ -158,18 +198,26 @@ export const serviceAreas = {
     "-Suwanee",
     "-Lilburn",
     "-Grayson",
-    "-Norcross",
+    "-Loganville",
     "-Winder",
     "-Bethlehem",
     "-Auburn",
   ],
   areaStatment: `TGM proudly serves the Gwinnett County area, providing top-quality lawn care and property maintenance services. If you're unsure whether we service your specific location, feel free to reach out, and we'll be happy to assist you!`,
 };
+// Above is a object with a areas property which is a array for client service areas
+// Also a areaStatment to introduce that part of the page 
+// this is used in the home page
+
 
 export const marqueeWords = {
   top: ["Mowing", "Edging", "Trimming", "Aeration"],
   bottom: ["Fertilization", "Turf Dye", "Leaf Clean Up"],
 };
+
+
+// Above is a object that contains the top and bottom words of the marquee in a array.
+// marquee is on homepage 
 
 export const serviceDiscriptions = [
   {
@@ -312,7 +360,7 @@ export const serviceDiscriptions = [
   },
 ];
 
-// Above is the array of listed services
+// Above is the array of listed services for the services page
 
 export const careerQuestions = [
   {
@@ -391,7 +439,7 @@ export const careerQuestions = [
   },
 ];
 
-// Above is a list for career questions to be displayed don the page.
+// Above is a list for career questions to be displayed on the careers page.
 
 export const FaqQuestions = [
   {
@@ -410,3 +458,63 @@ export const FaqQuestions = [
       "Active clients can log in to the Client Portal using their email and password. Once inside, clients can easily request estimates, add work orders, track recurring services, and process credit card payments, all in one convenient location. We encourage all active clients to use the portal as their primary means of communication with us. This will help reduce the strain on our phone system, allowing us to better serve all our active clients and ensure that our phone lines are available for new customers.",
   },
 ];
+
+// Above is a list for faq's to be displayed on the portal page.
+
+
+
+export const galleryPhotos = [
+  {
+    alt:"Home Lawn Care - front yard",
+    picLink: galleryImage1
+    
+  },
+  {
+    alt:"Home Lawn Care - backyard",
+    picLink: galleryImage2
+    
+  },
+  {
+    alt:"Home Lawn Care - front yard",
+    picLink: galleryImage3
+    
+  },
+  {
+    alt:"Home Lawn Care - front yard",
+    picLink: galleryImage4
+    
+  },
+  {
+    alt:"Home Lawn Care - backyard",
+    picLink: galleryImage5
+    
+  },
+  {
+    alt:"Home Lawn Care - front yard",
+    picLink: galleryImage6
+    
+  },
+  {
+    alt:"Home Lawn Care - front yard",
+    picLink: galleryImage7
+    
+  },
+  {
+    alt:"Home Lawn Care - front yard",
+    picLink: galleryImage8
+    
+  },
+  {
+    alt:"Home Lawn Care - Commercial",
+    picLink: galleryImage9
+    
+  },
+  {
+    alt:"Home Lawn Care - freshly cut lawn",
+    picLink: galleryImage10
+    
+  },
+]
+
+// Above is our data for our gallery page.
+// it consists of picture links and alts

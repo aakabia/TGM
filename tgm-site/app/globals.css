@@ -20,6 +20,11 @@
   }
 
   /* apply font family yo the body */
+
+  .instagram{
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
 }
 
 @layer utilities {

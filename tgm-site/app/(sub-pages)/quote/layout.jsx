@@ -1,7 +1,6 @@
 import QuoteFormScript from "../../components/quotePage/QuoteFormScript.jsx"
 
 export default function QuoteLayout({ children }) {
-  const FormID = process.env.NEXT_PUBLIC_FORM_ID;
   return (
     <div>
       {children}
@@ -11,4 +10,5 @@ export default function QuoteLayout({ children }) {
   );
 }
 
-// QuoteLayout renders our script from QuoteForm and displays the children
+// QuoteLayout renders our script from QuoteFormScript and displays the children.
+// this happens for every page qithin quote directory.
