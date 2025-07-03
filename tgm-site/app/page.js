@@ -5,6 +5,8 @@ import ServiceArea from "./components/homePage/ServiceArea";
 import Marquee from "./components/homePage/Marquee";
 
 export default function Home() {
+
+  console.log("Hello")
   return (
     <main className=" relative flex flex-col h-screen  w-screen">
       <HomeBanner />
